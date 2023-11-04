@@ -1,0 +1,52 @@
+<h2 class = "text-center">ESPECIALISTA </h2>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card border-0 shadow rounded-3 my-5">
+        <div class="card-body p-4 p-sm-5">
+          <h5 class="card-title text-center mb-5 fw-light fs-5">REGISTRO</h5>
+          <form id="registroE" (ngSubmit)="registrarse(registroForm.value)" [formGroup]="registroForm">
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="nombres" placeholder="name@example.com" [(ngModel)]="especialista.nombres"formControlName="nombres">
+              <label for="nombres">Nombres</label>
+            </div>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="apellidos" placeholder="name@example.com" [(ngModel)]="especialista.apellidos" formControlName="apellidos">
+              <label for="apellidos">Apellidos</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="id" placeholder="name@example.com" [(ngModel)]="especialista.id" formControlName="id">
+              <label for="id">Numero identificacion</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" [(ngModel)]="especialista.email" formControlName="email">
+              <label for="email">Correo Electronico</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="especialista.password" formControlName="password">
+              <label for="password">Contraseña</label>
+            </div>
+
+            <div class="d-grid mb-2">
+              <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit" form="registroE" [disabled]="registroForm.invalid">Registrarse</button>
+            </div>
+
+
+
+
+
+          </form>
+
+          <button class="btn btn-link" (click)="volver()">Volver</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

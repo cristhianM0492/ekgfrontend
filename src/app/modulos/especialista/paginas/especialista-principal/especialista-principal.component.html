@@ -1,0 +1,42 @@
+<h2 class = "text-center">ESPECIALISTA </h2>
+
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+      <div class="card border-0 shadow rounded-3 my-5">
+        <div class="card-body p-4 p-sm-5">
+          <h5 class="card-title text-center mb-5 fw-light fs-5">Iniciar sesion</h5>
+          <form id="usuarioEForm" (ngSubmit)="entrar()" [formGroup]="usuarioEForm">
+
+            <div class="form-floating mb-3">
+              <input type="email" class="form-control" id="email" placeholder="name@example.com" formControlName="correo">
+              <label for="email">Correo Electronico</label>
+            </div>
+
+            <div class="form-floating mb-3">
+              <input type="password" class="form-control" id="Password" placeholder="Password" formControlName="contrasenia">
+              <label for="Password">Contraseña</label>
+            </div>
+
+            <div class="d-grid mb-2">
+              <button class="btn btn-primary btn-login text-uppercase fw-bold" type="submit" (click)="login()">Iniciar sesion</button>
+            </div>
+
+            <div class="d-grid">
+              <button class="btn btn-primary btn-login text-uppercase fw-bold" type="button" (click)="registro()">Registrarse</button>
+
+            </div>
+
+            <hr class="my-4">
+
+          </form>
+
+          <button class="btn btn-link" routerLink="**">Volver</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

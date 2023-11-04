@@ -1,0 +1,113 @@
+<h2 class = "text-center">HISTORIA CLINICA </h2>
+<div class="container">
+  <div class="row">
+
+      <div class="card border-0 shadow rounded-3 my-5">
+        <div class="card-body p-4 p-sm-5">
+  <form id="registroH" (ngSubmit)="guardarH(registroForm.value)" [formGroup]="registroForm">
+    <div class="row">
+      <div class="col">
+    <label for="nombres">Nombres</label>
+    <input type="text" class="form-control" id="nombres" placeholder="name@example.com" [(ngModel)]="paciente.nombres" formControlName="nombres">
+      </div>
+      <div class="col">
+    <label for="apellidos">Apellidos</label>
+    <input type="text" class="form-control" id="apellidos" placeholder="name@example.com" [(ngModel)]="paciente.apellidos" formControlName="apellidos">
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+    <label for="email">Correo Electronico</label>
+    <input type="email" class="form-control" id="email" placeholder="name@example.com" [(ngModel)]="paciente.email" formControlName="email">
+  </div>
+  <div class="col-md-6">
+    <label for="id" class="form-label">Numero Identidicacion:</label>
+    <input type="text" class="form-control" id="id" placeholder="1234567" [(ngModel)]="paciente.id" formControlName="id">
+  </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+    <label for="direccion" class="form-label">DIRECCION:</label>
+    <input type="text" class="form-control" id="direccion" placeholder="cale 123" [(ngModel)]="paciente.direccion" formControlName="direccion">
+  </div>
+      <div class="form-group col-md-4">
+    <label for="telefono" class="form-label">TELEFONO:</label>
+    <input type="text" class="form-control" id="telefono" placeholder="3112345" [(ngModel)]="paciente.telefono" formControlName="telefono">
+  </div>
+      <div class="form-group col-md-2">
+    <label for="ciudad" class="form-label">CIUDAD:</label>
+    <input type="text" class="form-control" id="ciudad" [(ngModel)]="paciente.ciudad" formControlName="ciudad">
+  </div>
+    </div>
+
+    <div class="row">
+      <div class="col">
+    <label for="edad" class="form-label">EDAD:</label>
+    <input type="text" class="form-control" id="edad" [(ngModel)]="paciente.edad" formControlName="edad">
+  </div>
+  <div class="col-md-2">
+    <label for="peso" class="form-label">PESO:</label>
+    <input type="text" class="form-control" id="peso" [(ngModel)]="paciente.peso" formControlName="peso">
+  </div>
+  <div class="col-md-2">
+    <label for="estatura" class="form-label">ESTATURA:</label>
+    <input type="text" class="form-control" id="estatura" [(ngModel)]="paciente.estatura" formControlName="estatura">
+  </div>
+  <div class="col-md-2">
+    <label for="genero" class="form-label">GENERO:</label>
+    <input type="text"  class="form-control" id="genero" [(ngModel)]="paciente.genero" formControlName="genero">
+  </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+    <label for="antecedentes_Quirurgicos" class="form-label">ANTECEDENTES QUIRURGICOS</label>
+    <input type="text" class="form-control" id="antecedentes_Quirurgicos" [(ngModel)]="paciente.antecedentes_Quirurgicos" formControlName="antecedentes_Quirurgicos">
+    </div>
+  <div class="col-md-4">
+    <label for="antecedentes_Alergicos" class="form-label">ANTECEDENTES ALERGICOS</label>
+    <input type="text" class="form-control" id="antecedentes_Alergicos" [(ngModel)]="paciente.antecedentes_Alergicos" formControlName="antecedentes_Alergicos">
+  </div>
+  <div class="col-md-4">
+    <label for="antecedentes_Patologicos" class="form-label">ANTECEDENTES PATOLOGICOS</label>
+    <input type="text" class="form-control" id="antecedentes_Patologicos" [(ngModel)]="paciente.antecedentes_Patologicos" formControlName="antecedentes_Patologicos">
+  </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4">
+    <label for="antecedentes_Heredofamiliares" class="form-label">ANTECEDENTES HEREDO-FAMILIARES</label>
+    <input type="text" class="form-control" id="antecedentes_Heredofamiliares" [(ngModel)]="paciente.antecedentes_Heredofamiliares" formControlName="antecedentes_Heredofamiliares">
+  </div>
+  <div class="col-md-4">
+    <label for="antecedentes_Toxicos" class="form-label">ANTECEDENTES TOXICOS</label>
+    <input type="text" class="form-control" id="antecedentes_Toxicos" [(ngModel)]="paciente.antecedentes_Toxicos" formControlName="antecedentes_Toxicos">
+  </div>
+  <div class="col-md-4">
+    <label for="antecedentes_Transfuncionales" class="form-label">ANTECEDENTES TRANSFUNCIONALES</label>
+    <input type="text" class="form-control" id="antecedentes_Transfuncionales" [(ngModel)]="paciente.antecedentes_Transfuncionales" formControlName="antecedentes_Transfuncionales">
+  </div>
+    </div>
+<br>
+
+
+    <div class="col-12">
+      <button class="btn btn-primary " type="submit" form="registroH" [disabled]="registroForm.invalid">GUARDAR</button>
+    </div>
+    <br>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary"  (click)="examenes()">EXAMENES</button>
+  </div>
+
+  </form>
+
+  <button class="btn btn-link" (click)="volver()">Volver</button>
+
+
+      </div>
+    </div>
+  </div>
+</div>
+
+

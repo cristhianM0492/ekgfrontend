@@ -1,0 +1,32 @@
+<h2 class = "text-center">ESPECIALISTA </h2>
+
+<div class="col-md-6">
+  <label for="documento" class="form-label">Numero Identidicacion:</label>
+  <input type="tect" class="form-control" id="documento">
+</div>
+
+<div *ngFor="let paciente of listaPaciente">
+  {{paciente.apellidos}}
+  {{paciente.nombres}}
+</div>
+
+<div class="col-md-2">
+  <label for="inputState" class="form-label">ID DISPOSITIVO:</label>
+  <select id="inputState" class="form-select">
+    <option selected>Choose...</option>
+    <option>DISPOSITIVO 1</option>
+    <option>DISPOSITIVO 2</option>
+    <option>DISPOSITIVO 3</option>
+  </select>
+</div>
+
+<label for="inputState" class="form-label">FECHA:</label>
+<input type="date" style="margin: 60px" value="2023-05-01" />
+<div class="form-floating mb-100" class = "text-center">
+<div class="col-12">
+  <button c type="submit" style="margin: 80px "class="btn btn-primary">BUSCAR</button>
+</div>
+  <button class="btn btn-link" (click)="volver()">Volver</button>
+
+
+</div>
