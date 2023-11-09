@@ -114,7 +114,7 @@ export class ExamenEkgComponent implements OnInit, OnDestroy, AfterViewInit {
             display: true,
             title: {
               display: true,
-              text: 'Index'
+              text: 'time'
             },
             beginAtZero: true,
             min: 0,
