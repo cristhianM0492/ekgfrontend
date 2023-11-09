@@ -60,7 +60,7 @@ export class ExamenEkgComponent implements OnInit, OnDestroy, AfterViewInit {
   updateChartWithData(data: Uint16Array) {
     // Convierte el Int16Array a un array normal para poder usar el método push
     const dataArray = Array.from(data);
-    console.log(dataArray);
+    // console.log(dataArray);
     this.chartData.push(...dataArray); // Agrega los datos al array de datos del gráfico
     if (this.chartData.length >= 310) { // Si el array de datos del gráfico tiene más de 300 elementos, elimina los 10 primeros elementos
       for (let i = 0; i < dataArray.length; i++) { // Elimina los 10 primeros elementos del array de datos del gráfico
