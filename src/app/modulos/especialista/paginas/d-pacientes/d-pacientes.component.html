@@ -1,5 +1,9 @@
 <h2 class = "text-center">ESPECIALISTA </h2>
 
+<div class="container  text center">
+  <div class="row">
+    <div class="card border-0 shadow rounded-3 my-5">
+      <h4 class = "text-right">Datos del Paciente </h4>
 <div class="col-md-6">
   <label for="documento" class="form-label">Numero Identidicacion:</label>
   <input type="tect" class="form-control" id="documento">
@@ -23,10 +27,75 @@
 <label for="inputState" class="form-label">FECHA:</label>
 <input type="date" style="margin: 60px" value="2023-05-01" />
 <div class="form-floating mb-100" class = "text-center">
+</div>
+    </div>
+  </div>
+
+  <div class="container  text center">
+    <div class="row">
+      <div class="card border-0 shadow rounded-3 my-5">
+        <h4 class = "text-right">Historial de Examenes </h4>
+        <table class="table">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">FECHA DE REALIZACION</th>
+            <th scope="col">TIEMPO</th>
+            <th scope="col">APELLIDO</th>
+            <th scope="col">TELEFONO</th>
+            <th scope="col">ACCION</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <th scope="row">1116254</th>
+            <td>Mark</td>
+            <td>Otto</td>
+            <td>@mdo</td>
+            <td>
+              <a class ="btn btn-primary">Editar</a>
+              &nbsp;
+              <button  class="btn btn-danger">
+                Delete <i class="fa fa-trash-o fa-lg"></i>
+              </button>
+            </td>
+
+          </tr>
+          <tr>
+            <th scope="row">2</th>
+            <td>Jacob</td>
+            <td>Thornton</td>
+            <td>@fat</td>
+            <td>
+              <a class ="btn btn-primary">Editar</a>
+              &nbsp;
+              <button  class="btn btn-danger">
+                Delete <i class="fa fa-trash-o fa-lg"></i>
+              </button>
+            </td>
+          </tr>
+          <tr>
+            <th scope="row">3</th>
+            <td>Larry</td>
+            <td>the Bird</td>
+            <td>@twitter</td>
+            <td>
+              <a class ="btn btn-primary">Editar</a>
+              &nbsp;
+              <button  class="btn btn-danger">
+                Delete <i class="fa fa-trash-o fa-lg"></i>
+              </button>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+
 <div class="col-12">
   <button c type="submit" style="margin: 80px "class="btn btn-primary">BUSCAR</button>
 </div>
   <button class="btn btn-link" (click)="volver()">Volver</button>
 
 
+</div>
+    </div>
+  </div>
 </div>
