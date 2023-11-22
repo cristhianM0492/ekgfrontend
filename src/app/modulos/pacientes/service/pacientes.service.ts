@@ -17,8 +17,11 @@ export class PacientesService {
   }
 
   //Observable es parte de la interfaz reactiva de javascript (rxjs)
-  getPacientes(): Observable<Paciente[]> {
-    return this.httpClient.get<Paciente[]>(this.baseUrl + "pacientes");//
+  public getPacientes(): Observable<Paciente[]> {
+    return this.httpClient.get<Paciente[]>(this.baseUrl + "obtener-pacientes");//
+  }
+  public elimnarPacientes(paciente: Paciente): Observable<any>{
+    return this.httpClient.delete<Paciente[]>(this.baseUrl + "pacientes");
   }
   public createPacientes(paciente: Paciente): Observable<any>{
     return this.httpClient.post<any>(this.baseUrl + "pacientes", paciente);

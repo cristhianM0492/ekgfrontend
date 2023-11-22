@@ -19,7 +19,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-                <a class="nav-link" href="#">Crear Paciente</a>
+                <a class="nav-link" href="#" (click)="crearpaciente()">Crear Paciente</a>
             </li>
         </ul>
     </div>
@@ -31,51 +31,28 @@
             <th scope="col">ID</th>
             <th scope="col">NOMBRE</th>
             <th scope="col">APELLIDO</th>
-            <th scope="col">TELEFONO</th>
+            <th scope="col">FECHA DE NACIMIENTO</th>
+            <th scope="col">EMAIL</th>
             <th scope="col">ACCION</th>
         </tr>
         </thead>
         <tbody>
-        <tr>
-            <th scope="row">1116254</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
+        <tr *ngFor="let item of listPacientes">
+            <th scope="row" >{{item.id}}</th>
+            <td> {{item.nombres}}</td>
+            <td>{{item.apellidos}}</td>
+            <td>{{item.fecha}}</td>
+            <td>{{item.email}}</td>
             <td>
                 <a class ="btn btn-primary">Editar</a>
                 &nbsp;
-                <button  class="btn btn-danger">
+                <button  class="btn btn-danger" (click)="eliminar()">
                     Delete <i class="fa fa-trash-o fa-lg"></i>
                 </button>
             </td>
 
         </tr>
-        <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-            <td>
-                <a class ="btn btn-primary">Editar</a>
-                &nbsp;
-            <button  class="btn btn-danger">
-                Delete <i class="fa fa-trash-o fa-lg"></i>
-            </button>
-            </td>
-        </tr>
-        <tr>
-            <th scope="row">3</th>
-            <td>Larry</td>
-            <td>the Bird</td>
-            <td>@twitter</td>
-            <td>
-                <a class ="btn btn-primary">Editar</a>
-                &nbsp;
-                <button  class="btn btn-danger">
-                    Delete <i class="fa fa-trash-o fa-lg"></i>
-                </button>
-            </td>
-        </tr>
+
         </tbody>
     </table>
       <div class="card-body p-4 p-sm-5">

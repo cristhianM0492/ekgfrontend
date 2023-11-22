@@ -27,7 +27,19 @@
         <label  class="form-label">FECHA:</label>
         <input type="date" style="margin: 60px" value="2023-05-01" />
         <br>
-
+          <div class="row">
+              <div>
+                  <div id="realtimechart">
+                      <div class="container-canvas">
+                          <canvas id="realtime-chart"></canvas>
+                      </div>
+                      <button id="sendButton" (click)="sendBinaryData()">VER EXAMEN</button>
+                      <div class="col-md-12 text-center">
+                          <button id="grabar" (click)="sendBinaryData()">GRABAR</button>
+                          <i class="fa-sharp fa-regular fa-record-vinyl"></i>
+                      </div>
+                  </div>
+                  </div>
 <div class="col-12">
   <button type="submit" class="btn btn-primary">BUSCAR</button>
 
@@ -37,4 +49,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

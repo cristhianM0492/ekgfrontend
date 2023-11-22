@@ -5,13 +5,15 @@ import {ReactiveFormsModule} from "@angular/forms";
 import {DPacientesComponent} from './paginas/d-pacientes/d-pacientes.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {RegistroEComponent} from './paginas/registro-e/registro-e/registro-e.component';
+import { CrearPacienteComponent } from './paginas/crear-paciente/crear-paciente.component';
 
 
 @NgModule({
   declarations: [
     EspecialistaPrincipalComponent,
     DPacientesComponent,
-    RegistroEComponent
+    RegistroEComponent,
+    CrearPacienteComponent
   ],
   imports: [
     CommonModule,

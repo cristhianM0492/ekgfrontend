@@ -14,6 +14,9 @@ import {RegistroPComponent} from "./modulos/pacientes/paginas/registro-p/registr
 import {RegistroEComponent} from "./modulos/especialista/paginas/registro-e/registro-e/registro-e.component";
 import {MEspecialistaComponent} from "./modulos/especialista/paginas/m-especialista/m-especialista.component";
 import {ExamenEkgComponent} from "./modulos/especialista/paginas/examen-ekg/examen-ekg.component";
+import {
+  CrearPacienteComponent
+} from "./modulos/especialista/paginas/crear-paciente/crear-paciente.component";
 
 
 const routes: Routes = [
@@ -60,6 +63,10 @@ const routes: Routes = [
   path: 'examen-ekg',
   component:ExamenEkgComponent,
 },
+  {
+    path: 'crear-paciente',
+    component:CrearPacienteComponent,
+  },
   {
     path: '**',
   redirectTo: ''

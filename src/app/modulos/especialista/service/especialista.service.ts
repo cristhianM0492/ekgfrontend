@@ -21,7 +21,9 @@ export class EspecialistaService {
   getEspecialistas(): Observable<Especialista[]> {
     return this.httpClient.get<Especialista[]>(this.baseUrl);
   }
-
+  getPacientes(): Observable<any[]> {
+    return this.httpClient.get<any[]>(this.baseUrl + "obtener-pacientes");
+  }
   save(especialista: Especialista){
     this.httpClient.post(this.baseUrl, especialista);
     console.log(especialista.email);
