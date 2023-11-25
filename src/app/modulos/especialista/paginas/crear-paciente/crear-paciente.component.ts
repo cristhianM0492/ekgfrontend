@@ -3,6 +3,8 @@ import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {EspecialistaService} from "../../service/especialista.service";
 import {Router} from "@angular/router";
 import {Especialista} from "../../model/especialista";
+import {PacientesService} from "../../../pacientes/service/pacientes.service";
+import {Paciente} from "../../../pacientes/model/paciente";
 
 @Component({
   selector: 'app-crear-paciente',
@@ -11,27 +13,28 @@ import {Especialista} from "../../model/especialista";
 })
 export class CrearPacienteComponent implements OnInit{
   registroForm!: FormGroup;
-  cpaciente = {
+  paciente = {
     email: '',
     password: '',
     id: '',
     nombres: '',
+    fecha: '',
     apellidos: '',
 
   };
   //public identificacion: string;
   estado = false;
-  constructor(private especialistaService: EspecialistaService, private router: Router){
+  constructor(private pacienteService: PacientesService, private router: Router){
 
   }
-  registrarse(especialista: Especialista){
-    console.log(especialista)
-    this.especialistaService.createEspecialista(especialista).subscribe({
-      next: especialista => {
-        console.log(especialista)
+  registrarse(paciente: Paciente) {
+    console.log(paciente)
+    // this.pacienteService.save(paciente); //supuestamente este es para guardar los
+    this.pacienteService.createPacientes(paciente).subscribe({
+      next: paciente => {
+        console.log(paciente)
       },
       error: err => {
-        alert('Registro fallido');
         console.log(err)
       },
       complete: () => {
@@ -47,6 +50,7 @@ export class CrearPacienteComponent implements OnInit{
       email: new FormControl<string>('', [Validators.required, Validators.minLength(1)]),
       password: new FormControl<string>('', Validators.required),
       nombres: new FormControl<string>('', Validators.required),
+      fecha: new FormControl<string>('', Validators.required),
       apellidos: new FormControl<string>('', Validators.required),
       id: new FormControl<string>('', Validators.required)
     });

@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {PacientesService} from "../../../pacientes/service/pacientes.service";
 import {Paciente} from "../../../pacientes/model/paciente";
+import {HistoriaC} from "../../../pacientes/model/historiaC";
 import {Observable} from "rxjs";
 import {Router} from "@angular/router";
 
@@ -11,6 +12,7 @@ import {Router} from "@angular/router";
 })
 export class DPacientesComponent implements OnInit{
     public listaPaciente!: Paciente[];
+  //  public historiaPaciente!: historiaC[];
     constructor(private pacientesService:PacientesService, private router: Router) {
     }
 
@@ -22,5 +24,8 @@ export class DPacientesComponent implements OnInit{
   volver = () => {
     this.router.navigate(['/especialista']);
   }
+    tomarEKG = () => {
+        this.router.navigate(['/examen-ekg']);
+    }
 
 }

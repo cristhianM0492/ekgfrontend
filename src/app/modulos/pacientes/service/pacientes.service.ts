@@ -20,6 +20,7 @@ export class PacientesService {
   public getPacientes(): Observable<Paciente[]> {
     return this.httpClient.get<Paciente[]>(this.baseUrl + "obtener-pacientes");//
   }
+
   public elimnarPacientes(paciente: Paciente): Observable<any>{
     return this.httpClient.delete<Paciente[]>(this.baseUrl + "pacientes");
   }

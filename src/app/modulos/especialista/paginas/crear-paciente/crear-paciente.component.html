@@ -10,26 +10,26 @@
                     <h5 class="card-title text-center mb-5 fw-light fs-5">REGISTRO</h5>
                     <form id="registroE" (ngSubmit)="registrarse(registroForm.value)" [formGroup]="registroForm">
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="nombres" placeholder="name@example.com" [(ngModel)]="cpaciente.nombres"formControlName="nombres">
+                            <input type="text" class="form-control" id="nombres" placeholder="name@example.com" [(ngModel)]="paciente.nombres"formControlName="nombres">
                             <label for="nombres">Nombres</label>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="apellidos" placeholder="name@example.com" [(ngModel)]="cpaciente.apellidos" formControlName="apellidos">
+                            <input type="text" class="form-control" id="apellidos" placeholder="name@example.com" [(ngModel)]="paciente.apellidos" formControlName="apellidos">
                             <label for="apellidos">Apellidos</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="id" placeholder="name@example.com" [(ngModel)]="cpaciente.id" formControlName="id">
+                            <input type="text" class="form-control" id="id" placeholder="name@example.com" [(ngModel)]="paciente.id" formControlName="id">
                             <label for="id">Numero identificacion</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="email" placeholder="name@example.com" [(ngModel)]="cpaciente.email" formControlName="email">
+                            <input type="email" class="form-control" id="email" placeholder="name@example.com" [(ngModel)]="paciente.email" formControlName="email">
                             <label for="email">Correo Electronico</label>
                         </div>
 
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="cpaciente.password" formControlName="password">
+                            <input type="password" class="form-control" id="password" placeholder="Password" [(ngModel)]="paciente.password" formControlName="password">
                             <label for="password">Contraseña</label>
                         </div>
 

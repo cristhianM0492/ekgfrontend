@@ -43,7 +43,7 @@ export class MEspecialistaComponent implements OnInit {
         })
   }
  eliminar() {
-     /* this.pacienteService.elimnarPacientes().subscribe((result:any) => {
+   /*   this.pacienteService.elimnarPacientes().subscribe((result:any) => {
             this.listPacientes = result;
             console.log(this.listPacientes);
           },

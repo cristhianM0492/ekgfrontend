@@ -2,6 +2,8 @@ import {AfterViewInit, Component, OnDestroy, OnInit} from '@angular/core';
 import {EspecialistaService} from "../../service/especialista.service";
 import {Router} from "@angular/router";
 import {Chart} from 'chart.js/auto';
+import {Paciente} from "../../../pacientes/model/paciente";
+import {PacientesService} from "../../../pacientes/service/pacientes.service";
 
 
 
@@ -16,9 +18,10 @@ export class ExamenEkgComponent implements OnInit, OnDestroy, AfterViewInit {
   private socket: WebSocket; // Almacena la conexión WebSocket
   private chart!: Chart;  // Almacena el gráfico
   private chartData: number[] = []; // Almacena los datos para el gráfico
+  public listaPaciente!: Paciente[];
 
 
-  constructor(private especialistaService: EspecialistaService, private router: Router) {// Reemplaza la URL con la dirección de tu servidor WebSocket
+  constructor(private especialistaService: EspecialistaService,private pacientesService:PacientesService, private router: Router) {// Reemplaza la URL con la dirección de tu servidor WebSocket
 
     this.socket = new WebSocket('ws://18.216.246.183:8080/random-binary');
 
@@ -136,6 +139,9 @@ export class ExamenEkgComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   ngOnInit(): void {
+    this.pacientesService.getPacientes().subscribe(
+        pacientes => this.listaPaciente=pacientes
+    );
   }
 
 

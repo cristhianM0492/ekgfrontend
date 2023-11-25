@@ -7,10 +7,8 @@
     <div class="row">
         <div class="card border-0 shadow rounded-3 my-5">
 <form class ="form-check-inline">
-    <div>
-    <div class="form-group mx-sm-3 mb-2">
+    <div class="col-md-4">
 <input type="text" name="idpaciente" class="form-control" id="idpaciente" placeholder="Digite id del paciente">
-    </div>
     <input type="submit" class="btn btn-primary mb-2" value="Buscar">
     </div>
 </form>
@@ -38,7 +36,7 @@
         </thead>
         <tbody>
         <tr *ngFor="let item of listPacientes">
-            <th scope="row" >{{item.id}}</th>
+            <th scope="row" type="button" id="grabar" (click)="registro()">{{item.id}}</th>
             <td> {{item.nombres}}</td>
             <td>{{item.apellidos}}</td>
             <td>{{item.fecha}}</td>
@@ -57,21 +55,6 @@
     </table>
       <div class="card-body p-4 p-sm-5">
 <div class="position-relative">
-  <div class="position-absolute top-100 start-50 translate-middle"></div>
-  <div class="form-floating mb-180" class = "text-center">
-  <button  width="500" height="500" type="button" class="btn btn-primary btn-lg" (click)="registro()">
-    BUSCAR PACIENTE
-  </button>
-
-</div>
-</div>
-        <br>
-
-<div class="form-floating mb-100" class = "text-center">
-
-  <button  width="500" height="500" type="button" class="btn btn-primary btn-lg"(click)="registro2()" >
-    TOMAR EXAMEN</button>
-</div>
         <button class="btn btn-link" (click)="volver()">Volver</button>
       </div>
     </div>

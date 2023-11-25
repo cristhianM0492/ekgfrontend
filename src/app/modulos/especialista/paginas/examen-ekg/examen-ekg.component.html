@@ -11,15 +11,24 @@
                     <div>
                         <label class="form-label">FECHA:</label>
                         <input type="date" style="margin: 60px" value="2023-05-01"/>
-                        <div class="form-group col-md-2">
-                            <label for="inputZip">ID Del PACIENTE</label>
-                            <input type="text" class="form-control" id="inputZip">
-                        </div>
-                    </div>
-                    <div class="form-group col-md-2">
-                        <label for="dispositivo">ID Del DISPOSITIVO</label>
-                        <input type="text" class="form-control" id="dispositivo">
-                    </div>
+                        <table class="table">
+                            <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">ID PACIENTE</th>
+                                <th scope="col">DISPOSITIVO</th>
+
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr *ngFor="let item of listaPaciente">
+                                <th scope="row" >{{item.id}}</th>
+                                <td> {{item.nombres}}</td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+
+                </div>
                     <div class="row">
                         <div>
                             <div id="realtimechart">

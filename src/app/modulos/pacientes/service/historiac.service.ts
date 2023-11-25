@@ -19,4 +19,7 @@ export class HistoriacService {
   public createHistoriaC(historiac: HistoriaC): Observable<any> {
     return this.httpClient.post<any>(this.baseUrl + "historiac", historiac);
   }
+    public getHistoria(): Observable<HistoriaC[]> {
+        return this.httpClient.get<HistoriaC[]>(this.baseUrl + "obtener-historia");//
+    }
 }

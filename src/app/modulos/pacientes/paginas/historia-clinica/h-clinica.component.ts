@@ -3,6 +3,7 @@ import {PacientesService} from "../../service/pacientes.service";
 import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {HistoriaC} from "../../model/historiaC";
+import {Paciente} from "../../model/paciente";
 
 @Component({
   selector: 'app-h-clinica',
@@ -10,6 +11,8 @@ import {HistoriaC} from "../../model/historiaC";
   styleUrls: ['./h-clinica.component.css']
 })
 export class HClinicaComponent implements OnInit{
+  public listaPaciente!: Paciente[];
+  public listaHistoria!: HistoriaC[];
   registroForm!: FormGroup;
   paciente = {
     email: '',
@@ -23,6 +26,8 @@ export class HClinicaComponent implements OnInit{
     peso: '',
     estatura: '',
     genero: '',
+    fumador: '',
+    diabetico:'',
     antecedentes_Quirurgicos: '',
     antecedentes_Alergicos: '',
     antecedentes_Patologicos: '',
@@ -32,14 +37,14 @@ export class HClinicaComponent implements OnInit{
 
   };
 
-  constructor(private pacienteService: PacientesService, private router: Router){
+  constructor(private pacientesService: PacientesService, private router: Router){
 
   }
 
   guardarH(historiaC: HistoriaC) {
     console.log(historiaC)
     // this.pacienteService.save(paciente); //supuestamente este es para guardar los
-    this.pacienteService.createHistoriaC(historiaC).subscribe({
+    this.pacientesService.createHistoriaC(historiaC).subscribe({
       next: historiaC => {
         console.log(historiaC)
       },
@@ -74,6 +79,9 @@ export class HClinicaComponent implements OnInit{
       antecedentes_Heredofamiliares: new FormControl<string>('', Validators.required),
       antecedentes_Transfuncionales: new FormControl<string>('', Validators.required)
     });
+    this.pacientesService.getPacientes().subscribe(
+        pacientes => this.listaPaciente=pacientes
+    );
   }
   examenes = () => {
     this.router.navigate(['examenes-p']);

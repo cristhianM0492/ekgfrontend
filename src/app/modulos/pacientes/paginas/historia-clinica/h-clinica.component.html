@@ -42,7 +42,7 @@
     </div>
 
     <div class="row">
-      <div class="col">
+      <div class="col-md-2">
     <label for="edad" class="form-label">EDAD:</label>
     <input type="text" class="form-control" id="edad" [(ngModel)]="paciente.edad" formControlName="edad">
   </div>
@@ -59,11 +59,59 @@
     <input type="text"  class="form-control" id="genero" [(ngModel)]="paciente.genero" formControlName="genero">
   </div>
     </div>
+      <label for="diabetico" class="form-label">DIABETICO:    </label>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"  [(ngModel)]="paciente.diabetico" formControlName="inlineRadio1">
+        <label class="form-check-label" for="inlineRadio1">SI</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+        <label class="form-check-label" for="inlineRadio2">NO</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
+        <label class="form-check-label" for="inlineRadio3">DESC</label>
+      </div>
+    <div class="row">
+      <div class="col-md-4">
+        <label for="fumador" class="form-label">FUMADOR</label>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fsi" value="option4">
+          <label class="form-check-label" for="fsi">SI</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fno" value="option5">
+          <label class="form-check-label" for="fno">NO</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fdesc" value="option6">
+          <label class="form-check-label" for="fdesc">DESC</label>
+        </div>
 
+      </div>
+    </div>
     <div class="row">
       <div class="col-md-4">
     <label for="antecedentes_Quirurgicos" class="form-label">ANTECEDENTES QUIRURGICOS</label>
-    <input type="text" class="form-control" id="antecedentes_Quirurgicos" [(ngModel)]="paciente.antecedentes_Quirurgicos" formControlName="antecedentes_Quirurgicos">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="antecedentes_Quirurgicos">
+          <label class="form-check-label" for="antecedentes_Quirurgicos">
+            SI
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="NOQ" checked>
+          <label class="form-check-label" for="NOQ">
+            NO
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="DESCQ" checked>
+          <label class="form-check-label" for="DESCQ">
+            DESCO
+          </label>
+        </div>
+      </div>
     </div>
   <div class="col-md-4">
     <label for="antecedentes_Alergicos" class="form-label">ANTECEDENTES ALERGICOS</label>
@@ -73,8 +121,6 @@
     <label for="antecedentes_Patologicos" class="form-label">ANTECEDENTES PATOLOGICOS</label>
     <input type="text" class="form-control" id="antecedentes_Patologicos" [(ngModel)]="paciente.antecedentes_Patologicos" formControlName="antecedentes_Patologicos">
   </div>
-    </div>
-
     <div class="row">
       <div class="col-md-4">
     <label for="antecedentes_Heredofamiliares" class="form-label">ANTECEDENTES HEREDO-FAMILIARES</label>
