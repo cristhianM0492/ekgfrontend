@@ -7,7 +7,7 @@ import {
 import {
   EspecialistaPrincipalComponent
 } from "./modulos/especialista/paginas/especialista-principal/especialista-principal.component";
-import {HClinicaComponent} from "./modulos/pacientes/paginas/historia-clinica/h-clinica.component";
+import {HClinicaComponent} from "./modulos/especialista/paginas/historia-clinica/h-clinica.component";
 import {ExamenesPComponent} from "./modulos/pacientes/paginas/examenes-p/examenes-p.component";
 import {DPacientesComponent} from "./modulos/especialista/paginas/d-pacientes/d-pacientes.component";
 import {RegistroPComponent} from "./modulos/pacientes/paginas/registro-p/registro-p.component";
@@ -17,6 +17,7 @@ import {ExamenEkgComponent} from "./modulos/especialista/paginas/examen-ekg/exam
 import {
   CrearPacienteComponent
 } from "./modulos/especialista/paginas/crear-paciente/crear-paciente.component";
+import {DatosPComponent} from "./modulos/pacientes/paginas/datos-p/datos-p.component";
 
 
 const routes: Routes = [
@@ -66,6 +67,10 @@ const routes: Routes = [
   {
     path: 'crear-paciente',
     component:CrearPacienteComponent,
+  },
+  {
+    path: 'datos-p',
+    component:DatosPComponent,
   },
   {
     path: '**',

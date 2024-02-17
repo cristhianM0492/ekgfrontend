@@ -4,12 +4,14 @@ import {PacientesPrincipalComponent} from './paginas/pacientes-principal/pacient
 import {ReactiveFormsModule} from "@angular/forms";
 import {RegistroPComponent} from './paginas/registro-p/registro-p.component';
 import {RouterLink} from "@angular/router";
+import { DatosPComponent } from './paginas/datos-p/datos-p.component';
 
 
 @NgModule({
   declarations: [
     PacientesPrincipalComponent,
     RegistroPComponent,
+    DatosPComponent,
 
 
   ],

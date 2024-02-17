@@ -41,7 +41,7 @@ export class PacientesPrincipalComponent implements OnInit{
   }
   login() {
 
-        this.router.navigate(['/historiaClinica']);
+        this.router.navigate(['/datos-p']);
       }
 
 

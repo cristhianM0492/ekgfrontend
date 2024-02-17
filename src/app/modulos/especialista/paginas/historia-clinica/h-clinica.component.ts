@@ -1,9 +1,10 @@
 import {Component, OnInit} from '@angular/core';
-import {PacientesService} from "../../service/pacientes.service";
+import {PacientesService} from "../../../pacientes/service/pacientes.service";
 import {Router} from "@angular/router";
 import {FormControl, FormGroup, Validators} from "@angular/forms";
-import {HistoriaC} from "../../model/historiaC";
-import {Paciente} from "../../model/paciente";
+import {HistoriaC} from "../../../pacientes/model/historiaC";
+import {Paciente} from "../../../pacientes/model/paciente";
+import {EspecialistaService} from "../../service/especialista.service";
 
 @Component({
   selector: 'app-h-clinica',
@@ -37,7 +38,7 @@ export class HClinicaComponent implements OnInit{
 
   };
 
-  constructor(private pacientesService: PacientesService, private router: Router){
+  constructor(private pacientesService: PacientesService, private router: Router, private especialistaService: EspecialistaService ){
 
   }
 

@@ -59,6 +59,7 @@
     <input type="text"  class="form-control" id="genero" [(ngModel)]="paciente.genero" formControlName="genero">
   </div>
     </div>
+    <form>
       <label for="diabetico" class="form-label">DIABETICO:    </label>
       <div class="form-check form-check-inline">
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"  [(ngModel)]="paciente.diabetico" formControlName="inlineRadio1">
@@ -72,9 +73,11 @@
         <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3">
         <label class="form-check-label" for="inlineRadio3">DESC</label>
       </div>
+    </form>
+          <form>
     <div class="row">
       <div class="col-md-4">
-        <label for="fumador" class="form-label">FUMADOR</label>
+        <label for="fumador" class="form-label">FUMADOR:  </label>
         <div class="form-check form-check-inline">
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fsi" value="option4">
           <label class="form-check-label" for="fsi">SI</label>
@@ -87,9 +90,10 @@
           <input class="form-check-input" type="radio" name="inlineRadioOptions" id="fdesc" value="option6">
           <label class="form-check-label" for="fdesc">DESC</label>
         </div>
-
       </div>
     </div>
+          </form>
+  <form>
     <div class="row">
       <div class="col-md-4">
     <label for="antecedentes_Quirurgicos" class="form-label">ANTECEDENTES QUIRURGICOS</label>
@@ -113,31 +117,58 @@
         </div>
       </div>
     </div>
+  </form>
+  <form>
   <div class="col-md-4">
     <label for="antecedentes_Alergicos" class="form-label">ANTECEDENTES ALERGICOS</label>
     <input type="text" class="form-control" id="antecedentes_Alergicos" [(ngModel)]="paciente.antecedentes_Alergicos" formControlName="antecedentes_Alergicos">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="Alergicos">
+      <label class="form-check-label" for="Alergicos">
+        SI
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="NOA" checked>
+      <label class="form-check-label" for="NOA">
+        NO
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="flexRadioDefault" id="DESCA" checked>
+      <label class="form-check-label" for="DESCA">
+        DESCO
+      </label>
+    </div>
   </div>
-  <div class="col-md-4">
-    <label for="antecedentes_Patologicos" class="form-label">ANTECEDENTES PATOLOGICOS</label>
-    <input type="text" class="form-control" id="antecedentes_Patologicos" [(ngModel)]="paciente.antecedentes_Patologicos" formControlName="antecedentes_Patologicos">
-  </div>
+  </form>
+  <form>
     <div class="row">
       <div class="col-md-4">
     <label for="antecedentes_Heredofamiliares" class="form-label">ANTECEDENTES HEREDO-FAMILIARES</label>
     <input type="text" class="form-control" id="antecedentes_Heredofamiliares" [(ngModel)]="paciente.antecedentes_Heredofamiliares" formControlName="antecedentes_Heredofamiliares">
-  </div>
-  <div class="col-md-4">
-    <label for="antecedentes_Toxicos" class="form-label">ANTECEDENTES TOXICOS</label>
-    <input type="text" class="form-control" id="antecedentes_Toxicos" [(ngModel)]="paciente.antecedentes_Toxicos" formControlName="antecedentes_Toxicos">
-  </div>
-  <div class="col-md-4">
-    <label for="antecedentes_Transfuncionales" class="form-label">ANTECEDENTES TRANSFUNCIONALES</label>
-    <input type="text" class="form-control" id="antecedentes_Transfuncionales" [(ngModel)]="paciente.antecedentes_Transfuncionales" formControlName="antecedentes_Transfuncionales">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="heredofamiliares">
+          <label class="form-check-label" for="heredofamiliares">
+            SI
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="NOH" checked>
+          <label class="form-check-label" for="NOH">
+            NO
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="DESCH" checked>
+          <label class="form-check-label" for="DESCH">
+            DESCO
+          </label>
+        </div>
   </div>
     </div>
+  </form>
 <br>
-
-
     <div class="col-12">
       <button class="btn btn-primary " type="submit" form="registroH" [disabled]="registroForm.invalid">GUARDAR</button>
     </div>

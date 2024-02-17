@@ -22,7 +22,7 @@ export class PacientesService {
   }
 
   public elimnarPacientes(paciente: Paciente): Observable<any>{
-    return this.httpClient.delete<Paciente[]>(this.baseUrl + "pacientes");
+    return this.httpClient.delete<Paciente[]>(this.baseUrl + "eliminar-pacientes");
   }
   public createPacientes(paciente: Paciente): Observable<any>{
     return this.httpClient.post<any>(this.baseUrl + "pacientes", paciente);

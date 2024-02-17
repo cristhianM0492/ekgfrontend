@@ -2,7 +2,7 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {PrincipalComponent} from './paginas/principal/principal.component';
-import {HClinicaComponent} from './modulos/pacientes/paginas/historia-clinica/h-clinica.component';
+import {HClinicaComponent} from './modulos/especialista/paginas/historia-clinica/h-clinica.component';
 import {ExamenesPComponent} from './modulos/pacientes/paginas/examenes-p/examenes-p.component';
 import {MEspecialistaComponent} from './modulos/especialista/paginas/m-especialista/m-especialista.component';
 import {AppRoutingModule} from "./app-routing.module";

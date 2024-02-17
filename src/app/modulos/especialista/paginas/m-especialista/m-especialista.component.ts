@@ -10,7 +10,7 @@ import {PacientesService} from "../../../../modulos/pacientes/service/pacientes.
 export class MEspecialistaComponent implements OnInit {
 
   public listPacientes: any[]=[];
-
+  public listHistoria: any[]=[];
   constructor(
       private especialistaService: EspecialistaService,
       private router: Router,
@@ -27,7 +27,7 @@ export class MEspecialistaComponent implements OnInit {
     this.router.navigate(['/examen-ekg']);
   }
   crearpaciente= () => {
-    this.router.navigate(['/crear-paciente']);
+    this.router.navigate(['/h-clinica']);
   }
 
   volver = () => {

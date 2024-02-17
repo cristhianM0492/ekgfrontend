@@ -18,6 +18,7 @@ export class RegistroPComponent implements OnInit{
     nombres: '',
     fecha: '',
     apellidos: '',
+    showAge: ''
 
   };
   //public identificacion: string;
@@ -56,4 +57,12 @@ ngOnInit(): void {
   volver = () => {
     this.router.navigate(['/pacientes']);
   }
+
+ /* ageCalculator(){
+    if(this.fecha){
+      const convertAge = new Date(this.fecha);
+      const timeDiff = Math.abs(Date.now() - convertAge.getTime());
+      this.showAge = Math.floor((timeDiff / (1000 * 3600 * 24))/365);
+    }
+  }*/
 }
