@@ -27,7 +27,7 @@ export class MEspecialistaComponent implements OnInit {
     this.router.navigate(['/examen-ekg']);
   }
   crearpaciente= () => {
-    this.router.navigate(['/h-clinica']);
+    this.router.navigate(['/historiaClinica']);
   }
 
   volver = () => {
