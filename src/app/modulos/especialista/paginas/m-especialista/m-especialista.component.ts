@@ -52,4 +52,7 @@ export class MEspecialistaComponent implements OnInit {
           })
     }*/
  }
+  editar = () => {
+    this.router.navigate(['/historiaClinica']);
+  }
 }
