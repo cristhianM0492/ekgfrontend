@@ -6,6 +6,7 @@ import {DPacientesComponent} from './paginas/d-pacientes/d-pacientes.component';
 import {HttpClient, HttpClientModule} from "@angular/common/http";
 import {RegistroEComponent} from './paginas/registro-e/registro-e/registro-e.component';
 import { CrearPacienteComponent } from './paginas/crear-paciente/crear-paciente.component';
+import {RouterLink} from "@angular/router";
 
 
 @NgModule({
@@ -18,7 +19,8 @@ import { CrearPacienteComponent } from './paginas/crear-paciente/crear-paciente.
   imports: [
     CommonModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterLink
   ],
   providers: [
     HttpClient
