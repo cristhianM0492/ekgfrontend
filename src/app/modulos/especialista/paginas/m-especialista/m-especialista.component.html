@@ -42,7 +42,7 @@
             <td>{{item.fecha}}</td>
             <td>{{item.email}}</td>
             <td>
-                <a class ="btn btn-primary">Editar</a>
+                <a class ="btn btn-primary" (click)="editar()">Editar</a>
                 &nbsp;
                 <button  class="btn btn-danger" (click)="eliminar(item)">
                     Delete <i class="fa fa-trash-o fa-lg"></i>

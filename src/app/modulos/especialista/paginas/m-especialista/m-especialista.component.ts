@@ -27,7 +27,7 @@ export class MEspecialistaComponent implements OnInit {
     this.router.navigate(['/examen-ekg']);
   }
   crearpaciente= () => {
-    this.router.navigate(['/historiaClinica']);
+    this.router.navigate(['/registro-p']);
   }
 
   volver = () => {
@@ -42,7 +42,9 @@ export class MEspecialistaComponent implements OnInit {
           console.error('Error fetching data: ', error);
         })
   }
-
+  editar = () => {
+    this.router.navigate(['/historiaClinica']);
+  }
     eliminar(paciente: Paciente){
       console.log(paciente)
       this.pacienteService.elimnarPacientes(paciente).subscribe({
