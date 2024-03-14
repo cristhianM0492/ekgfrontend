@@ -43,6 +43,25 @@ export class RegistroEComponent implements OnInit{
 
   }
 
+  
+  eliminar(especialista: Especialista){
+    console.log(especialista)
+    this.especialistaService.delete(especialista).subscribe({
+      next: especialista => {
+        console.log(especialista)
+      },
+      error: err => {
+        alert('eliminacion fallida');
+        console.log(err)
+      },
+      complete: () => {
+        alert('eliminacion exitosa');
+        console.log('Registro exitoso ')}
+
+    });
+
+  }
+
   ngOnInit(): void {
     this.registroForm = new FormGroup({
       email: new FormControl<string>('', [Validators.required, Validators.minLength(1)]),

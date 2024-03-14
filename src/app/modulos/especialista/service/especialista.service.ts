@@ -32,6 +32,10 @@ export class EspecialistaService {
     return this.httpClient.post<any>(this.baseUrl + "especialistas", especialista);
   }
 
+  delete(especialista: Especialista): Observable<any>{
+    return this.httpClient.post<any>(this.baseUrl + "eliminar/especialista/{especialista}", especialista);
+  }
+
 
 }
 
